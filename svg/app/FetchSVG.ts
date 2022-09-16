@@ -52,8 +52,8 @@ function renderIcon(el: SVGSVGElement) {
     });
 }
 
-let elem = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-elem.setAttribute("data-src", "./public/x.svg");
-document.getElementsByTagName("body")[0].appendChild(elem);
+// let elem = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+// elem.setAttribute("data-src", "./public/x.svg");
+// document.getElementsByTagName("body")[0].appendChild(elem);
 
-renderIcon(elem);
+// renderIcon(elem);
