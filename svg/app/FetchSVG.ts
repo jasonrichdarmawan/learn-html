@@ -21,9 +21,7 @@ function renderBody(elem: SVGSVGElement, body: string) {
     script.remove()
     console.warn(`found <script> from fetching ${elem.getAttribute("data-src")}`)
   }
-  Array.from(elem.attributes).forEach((attribute) => {
-    elem.removeAttribute(attribute.name);
-  });
+  elem.removeAttribute("data-src")
   Array.from(svg.attributes).forEach((attribute) => {
     elem.setAttribute(attribute.name, attribute.value);
   });
