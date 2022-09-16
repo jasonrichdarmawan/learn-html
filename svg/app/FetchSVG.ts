@@ -19,7 +19,7 @@ function renderBody(elem: SVGSVGElement, body: string) {
   let script = svg.querySelector("script")
   if (script) {
     script.remove()
-    console.warn("found <script> from fetching")
+    console.warn(`found <script> from fetching ${elem.getAttribute("data-src")}`)
   }
   Array.from(elem.attributes).forEach((attribute) => {
     elem.removeAttribute(attribute.name);
