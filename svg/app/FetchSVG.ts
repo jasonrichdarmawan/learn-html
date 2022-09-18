@@ -71,7 +71,6 @@ async function renderIcon(elem: SVGSVGElement) {
   // Memory cache optimizes same icon requested multiple
   // times on the page
   if (memoryCache[src] || isCache) {
-    console.log("hello -", memoryCache[src], "-", isCache)
     const cache = memoryCache[src] || isCache;
     renderBody(elem, cache);
     return;
@@ -118,6 +117,11 @@ async function renderIcon(elem: SVGSVGElement) {
     });
 
 }
+
+document.querySelectorAll<SVGSVGElement>("svg[data-src]")
+.forEach(element => {
+    renderIcon(element)
+})
 
 // let elem = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 // elem.setAttribute("data-src", "./public/x.svg");
